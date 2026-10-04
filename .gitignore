@@ -1,0 +1,14 @@
+# Lean / Lake build output and dependency checkout
+lean/.lake/
+lean/build/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

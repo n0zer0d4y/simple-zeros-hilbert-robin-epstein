@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use these results or this code, please cite it as below."
+title: "simple-zeros-hilbert-robin-epstein: four certified results on simple zeros of zeta, the Montgomery-Vaughan constant, the odd Robin criterion and an Epstein zeta conjecture"
+abstract: >-
+  (1) Given the published inputs of Wang (arXiv:2609.24167), at least 0.672724 of the zeros of the Riemann zeta
+  function are simple and on the critical line and at least 0.836362 are distinct, by a whole-cell refinement with
+  ball-arithmetic certificates and a Lean 4 formalisation of the finite core. (2) The optimal constant in the
+  Montgomery-Vaughan weighted Hilbert inequality exceeds 3.14279, by an explicit certified configuration. (3) RH is
+  equivalent to sigma(n) < (e^gamma/2) n log log n for all odd n > 277093800961598968947975375, and this threshold is
+  sharp, answering a question of Washington and Yang. (4) Conjecture 1.1 of Betermin-Samaj-Travenec on the zero of the
+  rectangular Epstein zeta function at s = 1/2 is false. Unrefereed; produced autonomously by AI agents running inside a custom research harness.
+type: software
+authors:
+  - name: "Nozero Day"
+version: "0.1.0"
+date-released: "2026-10-04"
+license: MIT
+keywords:
+  - Riemann zeta function
+  - simple zeros
+  - critical line
+  - Montgomery-Vaughan inequality
+  - Robin's inequality
+  - Epstein zeta function
+  - interval arithmetic
+  - Lean 4

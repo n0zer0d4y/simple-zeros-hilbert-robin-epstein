@@ -1,0 +1,122 @@
+﻿k=1  excluded primes [2]  C_k = 0.890536208995099
+[1e0,1e1) nodes=5 cands=4 violators=4  largest violator=9 [3^2]  closest margin=+1.249580
+[1e1,1e2) nodes=50 cands=45 violators=24  largest violator=99 [3^2*11]  closest margin=+0.712822
+[1e2,1e3) nodes=139 cands=108 violators=40  largest violator=975 [3*5^2*13]  closest margin=+0.459177
+[1e3,1e4) nodes=264 cands=202 violators=53  largest violator=9975 [3*5^2*7*19]  closest margin=+0.292627
+[1e4,1e5) nodes=394 cands=254 violators=61  largest violator=98175 [3*5^2*7*11*17]  closest margin=+0.235431
+[1e5,1e6) nodes=506 cands=273 violators=67  largest violator=987525 [3^3*5^2*7*11*19]  closest margin=+0.187956
+[1e6,1e7) nodes=663 cands=293 violators=69  largest violator=9954945 [3^2*5*7*11*13^2*17]  closest margin=+0.136931
+[1e7,1e8) nodes=814 cands=288 violators=59  largest violator=98423325 [3^2*5^2*7*11*13*19*23]  closest margin=+0.128336
+[1e8,1e9) nodes=987 cands=315 violators=55  largest violator=999323325 [3^4*5^2*7*11*13*17*29]  closest margin=+0.117546
+[1e9,1e10) nodes=1094 cands=277 violators=65  largest violator=9820936125 [3^5*5^3*7*11*13*17*19]  closest margin=+0.102369
+[1e10,1e11) nodes=1258 cands=298 violators=48  largest violator=94935715875 [3^4*5^3*7*11*13*17*19*29]  closest margin=+0.083516
+[1e11,1e12) nodes=1421 cands=298 violators=51  largest violator=948702429675 [3^6*5^2*7^2*11*13*17*19*23]  closest margin=+0.076240
+[1e12,1e13) nodes=1530 cands=274 violators=51  largest violator=9803258439975 [3^5*5^2*7^2*11*13*17*19*23*31]  closest margin=+0.064243
+[1e13,1e14) nodes=1688 cands=326 violators=41  largest violator=94764831586425 [3^4*5^2*7^2*11*13*17*19*23*29*31]  closest margin=+0.057425
+[1e14,1e15) nodes=1739 cands=257 violators=41  largest violator=970211371003875 [3^3*5^3*7*11*13*17*19*23*29*31*43]  closest margin=+0.039046
+[1e15,1e16) nodes=1907 cands=254 violators=34  largest violator=8181363793628025 [3^3*5^2*7^3*11*13*17*19*23*29*31*37]  closest margin=+0.043823
+[1e16,1e17) nodes=1909 cands=248 violators=26  largest violator=63839908212054975 [3^3*5^2*7^2*11*13*17*19*23*29*31*43*47]  closest margin=+0.031370
+[1e17,1e18) nodes=1801 cands=206 violators=25  largest violator=965233961040073725 [3^4*5^2*7*11*13*17*19*23*29*31*37*41*47]  closest margin=+0.033591
+[1e18,1e19) nodes=1774 cands=145 violators=17  largest violator=8481736721479796775 [3^4*5^2*7^2*11*13*17*19*23*29*31*37*41*59]  closest margin=+0.029526
+[1e19,1e20) nodes=1825 cands=154 violators=14  largest violator=96845140757687397075 [3^3*5^2*7^2*11*13*17*19*23*29*31*37*41*43*47]  closest margin=+0.018838
+[1e20,1e21) nodes=1913 cands=175 violators=10  largest violator=982875151945040178825 [3^5*5^2*7^2*11*13*17*19*23*29*31*37*41*43*53]  closest margin=+0.025625
+[1e21,1e22) nodes=2048 cands=165 violators=6  largest violator=5713863304703556427425 [3^3*5^2*7^2*11*13*17*19*23*29*31*37*41*43*47*59]  closest margin=+0.018015
+[1e22,1e23) nodes=2093 cands=121 violators=11  largest violator=88613303793283968323625 [3^4*5^3*7^2*11*13*17*19*23*29*31*37*41*43*47*61]  closest margin=+0.018798
+[1e23,1e24) nodes=1801 cands=76 violators=5  largest violator=939301020208810064230425 [3^4*5^2*7^2*11*13*17*19*23*29*31*37*41*43*47*53*61]  closest margin=+0.010107
+[1e24,1e25) nodes=1532 cands=96 violators=4  largest violator=4696505101044050321152125 [3^4*5^3*7^2*11*13*17*19*23*29*31*37*41*43*47*53*61]  closest margin=+0.007604
+[1e25,1e26) nodes=1404 cands=109 violators=2  largest violator=55418760192319793789595075 [3^4*5^2*7^2*11*13*17*19*23*29*31*37*41*43*47*53*59*61]  closest margin=+0.004815
+[1e26,1e27) nodes=1358 cands=73 violators=1  largest violator=277093800961598968947975375 [3^4*5^3*7^2*11*13*17*19*23*29*31*37*41*43*47*53*59*61]  closest margin=+0.004443
+[1e27,1e28) nodes=1398 cands=43 violators=0  largest violator=-  closest margin=-0.001883
+[1e28,1e29) nodes=1519 cands=48 violators=0  largest violator=-  closest margin=-0.000343
+[1e29,1e30) nodes=1639 cands=37 violators=0  largest violator=-  closest margin=-0.004391
+[1e30,1e31) nodes=1896 cands=19 violators=0  largest violator=-  closest margin=-0.008070
+[1e31,1e32) nodes=2003 cands=14 violators=0  largest violator=-  closest margin=-0.006263
+[1e32,1e33) nodes=1960 cands=14 violators=0  largest violator=-  closest margin=-0.008919
+[1e33,1e34) nodes=1626 cands=20 violators=0  largest violator=-  closest margin=-0.008004
+[1e34,1e35) nodes=1078 cands=10 violators=0  largest violator=-  closest margin=-0.006843
+[1e35,1e36) nodes=816 cands=10 violators=0  largest violator=-  closest margin=-0.008184
+[1e36,1e37) nodes=604 cands=19 violators=0  largest violator=-  closest margin=-0.007495
+[1e37,1e38) nodes=512 cands=4 violators=0  largest violator=-  closest margin=-0.012335
+[1e38,1e39) nodes=500 cands=12 violators=0  largest violator=-  closest margin=-0.009062
+[1e39,1e40) nodes=525 cands=8 violators=0  largest violator=-  closest margin=-0.012344
+[1e40,1e41) nodes=596 cands=6 violators=0  largest violator=-  closest margin=-0.012395
+[1e41,1e42) nodes=757 cands=5 violators=0  largest violator=-  closest margin=-0.014239
+[1e42,1e43) nodes=960 cands=2 violators=0  largest violator=-  closest margin=-0.015199
+[1e43,1e44) nodes=1293 cands=4 violators=0  largest violator=-  closest margin=-0.015713
+[1e44,1e45) nodes=1521 cands=0 violators=0  largest violator=-  closest margin=-
+[1e45,1e46) nodes=1898 cands=2 violators=0  largest violator=-  closest margin=-0.015884
+[1e46,1e47) nodes=2097 cands=0 violators=0  largest violator=-  closest margin=-
+[1e47,1e48) nodes=1920 cands=2 violators=0  largest violator=-  closest margin=-0.015764
+[1e48,1e49) nodes=1400 cands=0 violators=0  largest violator=-  closest margin=-
+[1e49,1e50) nodes=904 cands=3 violators=0  largest violator=-  closest margin=-0.014544
+[1e50,1e51) nodes=612 cands=1 violators=0  largest violator=-  closest margin=-0.015918
+[1e51,1e52) nodes=380 cands=0 violators=0  largest violator=-  closest margin=-
+[1e52,1e53) nodes=246 cands=1 violators=0  largest violator=-  closest margin=-0.013705
+[1e53,1e54) nodes=221 cands=0 violators=0  largest violator=-  closest margin=-
+[1e54,1e55) nodes=120 cands=0 violators=0  largest violator=-  closest margin=-
+[1e55,1e56) nodes=123 cands=0 violators=0  largest violator=-  closest margin=-
+[1e56,1e57) nodes=98 cands=0 violators=0  largest violator=-  closest margin=-
+[1e57,1e58) nodes=100 cands=0 violators=0  largest violator=-  closest margin=-
+[1e58,1e59) nodes=132 cands=0 violators=0  largest violator=-  closest margin=-
+[1e59,1e60) nodes=164 cands=0 violators=0  largest violator=-  closest margin=-
+[1e60,1e61) nodes=262 cands=0 violators=0  largest violator=-  closest margin=-
+[1e61,1e62) nodes=309 cands=0 violators=0  largest violator=-  closest margin=-
+[1e62,1e63) nodes=509 cands=0 violators=0  largest violator=-  closest margin=-
+[1e63,1e64) nodes=712 cands=0 violators=0  largest violator=-  closest margin=-
+[1e64,1e65) nodes=1032 cands=0 violators=0  largest violator=-  closest margin=-
+[1e65,1e66) nodes=1451 cands=0 violators=0  largest violator=-  closest margin=-
+[1e66,1e67) nodes=1787 cands=0 violators=0  largest violator=-  closest margin=-
+[1e67,1e68) nodes=2046 cands=0 violators=0  largest violator=-  closest margin=-
+[1e68,1e69) nodes=1778 cands=0 violators=0  largest violator=-  closest margin=-
+[1e69,1e70) nodes=1204 cands=0 violators=0  largest violator=-  closest margin=-
+[1e70,1e71) nodes=707 cands=0 violators=0  largest violator=-  closest margin=-
+[1e71,1e72) nodes=321 cands=0 violators=0  largest violator=-  closest margin=-
+[1e72,1e73) nodes=73 cands=0 violators=0  largest violator=-  closest margin=-
+[1e73,1e74) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e74,1e75) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e75,1e76) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e76,1e77) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e77,1e78) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e78,1e79) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e79,1e80) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e80,1e81) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e81,1e82) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e82,1e83) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e83,1e84) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e84,1e85) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e85,1e86) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e86,1e87) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e87,1e88) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e88,1e89) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e89,1e90) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e90,1e91) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e91,1e92) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e92,1e93) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e93,1e94) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e94,1e95) nodes=42 cands=0 violators=0  largest violator=-  closest margin=-
+[1e95,1e96) nodes=170 cands=0 violators=0  largest violator=-  closest margin=-
+[1e96,1e97) nodes=430 cands=0 violators=0  largest violator=-  closest margin=-
+[1e97,1e98) nodes=938 cands=0 violators=0  largest violator=-  closest margin=-
+[1e98,1e99) nodes=1181 cands=0 violators=0  largest violator=-  closest margin=-
+[1e99,1e100) nodes=1521 cands=0 violators=0  largest violator=-  closest margin=-
+[1e100,1e101) nodes=1754 cands=0 violators=0  largest violator=-  closest margin=-
+[1e101,1e102) nodes=1451 cands=0 violators=0  largest violator=-  closest margin=-
+[1e102,1e103) nodes=883 cands=0 violators=0  largest violator=-  closest margin=-
+[1e103,1e104) nodes=478 cands=0 violators=0  largest violator=-  closest margin=-
+[1e104,1e105) nodes=184 cands=0 violators=0  largest violator=-  closest margin=-
+[1e105,1e106) nodes=49 cands=0 violators=0  largest violator=-  closest margin=-
+[1e106,1e107) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e107,1e108) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e108,1e109) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e109,1e110) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e110,1e111) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e111,1e112) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e112,1e113) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e113,1e114) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e114,1e115) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e115,1e116) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e116,1e117) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e117,1e118) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e118,1e119) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e119,1e120) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+TOTAL violators: 884  largest: (277093800961598968947975375, '3^4*5^3*7^2*11*13*17*19*23*29*31*37*41*43*47*53*59*61')  2.8s

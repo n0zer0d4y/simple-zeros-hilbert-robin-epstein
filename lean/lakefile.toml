@@ -1,0 +1,25 @@
+name = "simple_zeros_hilbert_robin_epstein"
+defaultTargets = ["SimpleZerosHilbertRobinEpstein"]
+
+# Project-wide Lean options. `autoImplicit false` is the
+# Mathlib convention: a mistyped identifier is an error, not a silently quantified variable.
+leanOptions = [
+  ["pp.unicode.fun", true],
+  ["autoImplicit", false],
+  ["relaxedAutoImplicit", false],
+  ["maxHeartbeats", 8000000],
+  ["maxRecDepth", 4000],
+  ["synthInstance.maxHeartbeats", 20000],
+  ["synthInstance.maxSize", 128],
+]
+
+# Pinned to the same revision as `lean-toolchain`. `scripts/setup-shared-deps.ps1` can point
+# `.lake/packages` at a shared, toolchain-keyed Mathlib store instead of a fresh checkout.
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.28.0"
+
+[[lean_lib]]
+name = "SimpleZerosHilbertRobinEpstein"
+globs = ["SimpleZerosHilbertRobinEpstein", "SimpleZerosHilbertRobinEpstein.+"]

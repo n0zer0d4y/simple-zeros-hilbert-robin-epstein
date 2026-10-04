@@ -1,0 +1,17 @@
+﻿k=0  excluded primes []  C_k = 1.78107241799020
+[1e0,1e1) nodes=9 cands=7 violators=6  largest violator=9 [3^2]  closest margin=+1.168241
+[1e1,1e2) nodes=61 cands=52 violators=12  largest violator=84 [2^2*3*7]  closest margin=+0.712139
+[1e2,1e3) nodes=75 cands=40 violators=6  largest violator=840 [2^3*3*5*7]  closest margin=+0.210829
+[1e3,1e4) nodes=92 cands=28 violators=2  largest violator=5040 [2^4*3^2*5*7]  closest margin=+0.048447
+[1e4,1e5) nodes=112 cands=18 violators=0  largest violator=-  closest margin=-0.071310
+[1e5,1e6) nodes=100 cands=9 violators=0  largest violator=-  closest margin=-0.124905
+[1e6,1e7) nodes=97 cands=3 violators=0  largest violator=-  closest margin=-0.156846
+[1e7,1e8) nodes=86 cands=1 violators=0  largest violator=-  closest margin=-0.183375
+[1e8,1e9) nodes=55 cands=0 violators=0  largest violator=-  closest margin=-
+[1e9,1e10) nodes=37 cands=1 violators=0  largest violator=-  closest margin=-0.146358
+[1e10,1e11) nodes=32 cands=0 violators=0  largest violator=-  closest margin=-
+[1e11,1e12) nodes=10 cands=0 violators=0  largest violator=-  closest margin=-
+[1e12,1e13) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+[1e13,1e14) nodes=1 cands=0 violators=0  largest violator=-  closest margin=-
+TOTAL violators: 26  largest: (5040, '2^4*3^2*5*7')  0.0s
+all violators: [3, 4, 5, 6, 8, 9, 10, 12, 16, 18, 20, 24, 30, 36, 48, 60, 72, 84, 120, 180, 240, 360, 720, 840, 2520, 5040]

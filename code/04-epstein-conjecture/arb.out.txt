@@ -1,0 +1,8 @@
+Delta*          = 0.14173323966388719138946879310110513117561107801843
+Z(1/2,D*) (I)   = [1.114506174979133299872977033157101950906e-19 +/- 2.50e-60]
+Z(1/2,D*) (II)  = [1.114506174979133e-19 +/- 5.87e-35]
+(I) lower bound > 0: True   (II) lower bound > 0: True
+balls overlap   : True
+Z(1/2,D*+1e-20) (II) = [-7.59592393063011e-20 +/- 5.37e-35]   upper bound < 0: True
+Z(1/2,D*+1e-20) (I)  = [-7.595923930630107870900320564833149890767e-20 +/- 1.60e-60]   upper bound < 0: True
+OK: Delta* is NOT a zero; a zero of Z(1/2,.) lies in (Delta*, Delta*+1e-20).

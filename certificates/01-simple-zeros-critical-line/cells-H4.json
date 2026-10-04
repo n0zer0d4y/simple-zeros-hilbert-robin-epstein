@@ -1,0 +1,183 @@
+{
+ "id": "cells-H4",
+ "object": "k-point pair energies of the Montgomery-Taylor kernel K_0 (Lamzouri; Wang, arXiv:2609.24167) in an interval of length H",
+ "kernel": "K_0 = c (sinc(A) + sinc(B)), c = 1/(2 sqrt(2) sin(1/sqrt(2))), A = (sqrt(2) - 2 pi x)/2, B = (sqrt(2) + 2 pi x)/2; Fourier transform with kernel e^(-2 pi i xi u) of f_0(u) = cos(sqrt(2) u)/(sqrt(2) sin(1/sqrt(2))) on [-1/2, 1/2]",
+ "certified": {
+  "m(4) >= 0.000221935": {
+   "H": "4",
+   "tau": "44387/200000000",
+   "n0": 200,
+   "cells_evaluated": 21319,
+   "cells_dropped": 18472,
+   "levels": [
+    [
+     0,
+     10300,
+     660
+    ],
+    [
+     1,
+     2523,
+     559
+    ],
+    [
+     2,
+     2125,
+     428
+    ],
+    [
+     3,
+     1616,
+     286
+    ],
+    [
+     4,
+     1099,
+     249
+    ],
+    [
+     5,
+     996,
+     247
+    ],
+    [
+     6,
+     988,
+     234
+    ],
+    [
+     7,
+     936,
+     184
+    ],
+    [
+     8,
+     736,
+     0
+    ]
+   ],
+   "min_dropped_lb": "[0.000221935175989 +/- 4.03e-16]",
+   "seconds": 0.044992923736572266,
+   "certified": true
+  },
+  "P_4(4) >= 0.002116538": {
+   "H": "4",
+   "tau": "1058269/500000000",
+   "n0": 64,
+   "cells_evaluated": 487917,
+   "cells_dropped": 424573,
+   "levels": [
+    [
+     0,
+     25551,
+     7740
+    ],
+    [
+     1,
+     55388,
+     16564
+    ],
+    [
+     2,
+     121422,
+     15239
+    ],
+    [
+     3,
+     112335,
+     11039
+    ],
+    [
+     4,
+     80147,
+     6938
+    ],
+    [
+     5,
+     49362,
+     3843
+    ],
+    [
+     6,
+     28968,
+     1981
+    ],
+    [
+     7,
+     14744,
+     0
+    ]
+   ],
+   "min_dropped_lb": "[0.00211653852148 +/- 3.28e-15]",
+   "seconds": 1.6275057792663574,
+   "certified": true
+  },
+  "P_4(4) >= 0.0009": {
+   "H": "4",
+   "tau": "9/10000",
+   "n0": 48,
+   "cells_evaluated": 412817,
+   "cells_dropped": 357733,
+   "levels": [
+    [
+     0,
+     11323,
+     7641
+    ],
+    [
+     1,
+     54636,
+     11644
+    ],
+    [
+     2,
+     84447,
+     19856
+    ],
+    [
+     3,
+     147664,
+     11083
+    ],
+    [
+     4,
+     80726,
+     4860
+    ],
+    [
+     5,
+     34021,
+     0
+    ]
+   ],
+   "min_dropped_lb": "[0.000900015713301 +/- 4.50e-16]",
+   "seconds": 1.3242590427398682,
+   "certified": true
+  }
+ },
+ "taylor_constants": {
+  "2d": "125 r^2 (Frobenius norm of the Hessian at most pi^2 sqrt(160))",
+  "3d": "592.5 r^2 (operator norm at most 40 pi^2 < 395, abs(h)^2 <= 3 r^2)"
+ },
+ "controls": {
+  "2d_target_above_minimum": "0.00022216 fails (cells remain at the maximum level)",
+  "3d_target_above_minimum": "0.002183 fails (cells remain at level 10)",
+  "direct_values": "g(1.0531, 2.0121) about 0.00022215; f(1.0408, 1.0330, 1.0408) about 0.0021817",
+  "random_scan_2d": "200000 random points, minimum above the certified bound"
+ },
+ "derived_values": {
+  "C_0": "0.6725007036794116...",
+  "u_H(H=4)": "0.672577305568034...",
+  "gain": "7.66018886e-5",
+  "distinct": "0.836288652784017..."
+ },
+ "code_sha256": {
+  "kernel.py": "5e18f37d40c4bd22370899a72cec1e42a98a637b0f79f536c54d2812fffee8c8",
+  "bnb.py": "f57cc44c8f2a34eeb71403aa3fc4a9a1eb89399eb1826d30b8c105c82c3c341f"
+ },
+ "lean": "lean/SimpleZerosHilbertRobinEpstein/SimpleZeros/WangCellBound.lean (simple_on_line_numeric)",
+ "reproduce": "cd code/01-simple-zeros-critical-line; python bnb.py m3 4 0.000221935 200; python bnb.py p4 4 0.002116538 64; python bnb.py p4 4 0.0009 48 (python-flint 0.8.0, 128-bit balls; seconds)",
+ "ceiling": "A proportion of simple zeros on the critical line says nothing about the position of the remaining zeros and cannot prove the Riemann hypothesis. Conditional on the published inputs of Wang's preprint (Proposition 2.1, Lemma 3.1, Section 4, with Lamzouri's asymptotics), which are not re-derived here.",
+ "final_constants": "code/01-simple-zeros-critical-line/final_constants.py (python-flint, 256 bits); output final_constants.out.txt",
+ "independent_check": "an independent binary64 branch and bound with an explicit rounding slack of 1e-13 gave the same two bounds before this ball-arithmetic run"
+}

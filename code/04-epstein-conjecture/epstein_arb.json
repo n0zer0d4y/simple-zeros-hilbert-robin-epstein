@@ -1,0 +1,13 @@
+{
+ "delta_star": "0.141733239663887191389468793101105131175611078018434540318850",
+ "Z_half_at_delta_star_definition": "[1.114506174979133299872977033157101950906e-19 +/- 2.50e-60]",
+ "Z_half_at_delta_star_bessel": "[1.114506174979133e-19 +/- 5.87e-35]",
+ "positive_definition": true,
+ "positive_bessel": true,
+ "Z_half_at_delta_star_plus_1e_20_bessel": "[-7.59592393063011e-20 +/- 5.37e-35]",
+ "negative_bessel": true,
+ "Z_half_at_delta_star_plus_1e_20_definition": "[-7.595923930630107870900320564833149890767e-20 +/- 1.60e-60]",
+ "negative_definition": true,
+ "integral_cutoff_T": 600,
+ "precision_bits": 320
+}

@@ -1,0 +1,173 @@
+{
+ "id": "cells-H7-H8",
+ "method": "feasibility branch and bound, python-flint balls (128 bits), local enclosures of (K_0^2)'' over each cell (bnbk.py, kernel2.py); targets 0.97 times the best values of a structured global search (targets-H7-H8.json)",
+ "minima_certified": {
+  "bnbk_H7_k3_tau0.0000113307.json": {
+   "H": "7",
+   "k": 3,
+   "tau": "113307/10000000000",
+   "n0": 8,
+   "cells_evaluated": 1980,
+   "cells_dropped": 1436,
+   "max_level": 9,
+   "min_dropped_lb": "[1.160741807e-5 +/- 4.38e-16]",
+   "seconds": 0.019484996795654297,
+   "certified": true
+  },
+  "bnbk_H7_k4_tau0.000143197.json": {
+   "H": "7",
+   "k": 4,
+   "tau": "143197/1000000000",
+   "n0": 8,
+   "cells_evaluated": 26895,
+   "cells_dropped": 22843,
+   "max_level": 8,
+   "min_dropped_lb": "[0.0001432203822 +/- 2.48e-14]",
+   "seconds": 0.18819904327392578,
+   "certified": true
+  },
+  "bnbk_H7_k5_tau0.000752866.json": {
+   "H": "7",
+   "k": 5,
+   "tau": "376433/500000000",
+   "n0": 8,
+   "cells_evaluated": 284454,
+   "cells_dropped": 261245,
+   "max_level": 8,
+   "min_dropped_lb": "[0.0007535642035 +/- 1.11e-14]",
+   "seconds": 3.343740463256836,
+   "certified": true
+  },
+  "bnbk_H7_k6_tau0.0030683.json": {
+   "H": "7",
+   "k": 6,
+   "tau": "30683/10000000",
+   "n0": 8,
+   "cells_evaluated": 3288002,
+   "cells_dropped": 3147343,
+   "max_level": 8,
+   "min_dropped_lb": "[0.003068493709 +/- 3.55e-13]",
+   "seconds": 42.44192957878113,
+   "certified": true
+  },
+  "bnbk_H8_k3_tau0.00000643552.json": {
+   "H": "8",
+   "k": 3,
+   "tau": "20111/3125000000",
+   "n0": 8,
+   "cells_evaluated": 2627,
+   "cells_dropped": 1910,
+   "max_level": 9,
+   "min_dropped_lb": "[6.499103044e-6 +/- 3.29e-17]",
+   "seconds": 0.024984359741210938,
+   "certified": true
+  },
+  "bnbk_H8_k4_tau0.0000705725.json": {
+   "H": "8",
+   "k": 4,
+   "tau": "28229/400000000",
+   "n0": 8,
+   "cells_evaluated": 42864,
+   "cells_dropped": 36563,
+   "max_level": 9,
+   "min_dropped_lb": "[7.060048886e-5 +/- 1.85e-15]",
+   "seconds": 0.27597475051879883,
+   "certified": true
+  },
+  "bnbk_H8_k5_tau0.000491377.json": {
+   "H": "8",
+   "k": 5,
+   "tau": "491377/1000000000",
+   "n0": 8,
+   "cells_evaluated": 554282,
+   "cells_dropped": 510513,
+   "max_level": 8,
+   "min_dropped_lb": "[0.0004915741262 +/- 3.20e-14]",
+   "seconds": 5.1211912631988525,
+   "certified": true
+  },
+  "bnbk_H8_k6_tau0.0015534.json": {
+   "H": "8",
+   "k": 6,
+   "tau": "7767/5000000",
+   "n0": 8,
+   "cells_evaluated": 6225428,
+   "cells_dropped": 5963875,
+   "max_level": 8,
+   "min_dropped_lb": "[0.001553472081 +/- 3.48e-13]",
+   "seconds": 77.00242781639099,
+   "certified": true
+  },
+  "bnbk_H8_k7_tau0.00375.json": {
+   "H": "8",
+   "k": 7,
+   "tau": "3/800",
+   "n0": 8,
+   "cells_evaluated": 69435168,
+   "cells_dropped": 67863334,
+   "max_level": 7,
+   "min_dropped_lb": "[0.003750032938 +/- 2.45e-13]",
+   "seconds": 1382.6279683113098,
+   "certified": true
+  }
+ },
+ "one_dimensional_check": {
+  "statement": "each of the 40 lines a_i + m_i g lies below K_0(g)^2 on [0, 1.06] and is non-positive at g >= 1.06",
+  "lines": 40,
+  "cells": 3086,
+  "tail_ok": true,
+  "smallest_lower_bound": 3.9248292070109915e-09
+ },
+ "phi_at_1": "0.00282794",
+ "envelope_exact_arithmetic": {
+  "H=7.0": {
+   "best_s": 0.001219407728,
+   "best_t": 0.00459130664,
+   "bound": 0.6726650520142102,
+   "distinct": 0.8363325260071051,
+   "tau_star": [
+    0.0,
+    0.0,
+    0.0,
+    2.26614e-05,
+    0.00028639400000000004,
+    0.001505732,
+    0.0061366,
+    0.0061366,
+    0.03959116
+   ]
+  },
+  "H=8.0": {
+   "best_s": 0.0021240971555555556,
+   "best_t": 0.009637782933333333,
+   "bound": 0.6727249102015639,
+   "distinct": 0.8363624551007819,
+   "tau_star": [
+    0.0,
+    0.0,
+    0.0,
+    1.2871039999999999e-05,
+    0.00014114500000000002,
+    0.000982754,
+    0.0031068000000000003,
+    0.00949684,
+    0.00949684,
+    0.04524704
+   ]
+  }
+ },
+ "H7_line": {
+  "s": "12194/10^7",
+  "t": "45914/10^7",
+  "K": 8,
+  "base_cases": "k = 4, 5 from P_4(7), P_5(7); k = 6, 7 from P_6(7) (Psi_7 >= Psi_6); k <= 3 trivial (line negative); anchor Psi_8 >= 14 phi(1)"
+ },
+ "H8_line": {
+  "s": "21240/10^7",
+  "t": "96373/10^7",
+  "K": 9,
+  "base_cases": "k = 5, 6 from P_5(8), P_6(8); k = 7, 8 from P_7(8) >= 0.00375 (Psi_8 >= Psi_7); k <= 4 trivial (line negative); anchor Psi_9 >= 16 phi(1)"
+ },
+ "final_constants": "final_constants.py (python-flint, 256 bits); output final_constants.out.txt",
+ "ceiling": "own-code ball arithmetic; Wang's published inputs not re-derived; a proportion of simple zeros says nothing about RH"
+}

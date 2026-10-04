@@ -1,0 +1,81 @@
+{
+ "id": "mv-constant",
+ "statement": "For integers lambda_1 < ... < lambda_N (lambda_1 = 0, gaps listed in the data file), Gaussian-integer weights w_m = a_m + i b_m and delta_m = min over n != m of abs(lambda_m - lambda_n), the ratio R = abs(sum over m != n of w_m conj(w_n)/(lambda_m - lambda_n)) / sum over m of abs(w_m)^2/delta_m is a lower bound for the optimal constant C of the Montgomery-Vaughan weighted Hilbert inequality (C is the smallest constant such that abs(sum_{m != n} w_m conj(w_n)/(lambda_m - lambda_n)) <= C sum abs(w_m)^2/delta_m for all N, all distinct reals lambda and all complex w). The data files below give R >= 3.1427910 (N = 60001), hence C >= pi + 1.19e-3.",
+ "data_files": {
+  "3201": {
+   "file": "certificates/02-montgomery-vaughan-constant/data/data_N3201.txt",
+   "sha256_lf_normalised": "6965967a96f78c9e4799b2b12bb1695ab9af56951233d1aeb42ee73d910ee298",
+   "bytes_lf": 95348
+  },
+  "12801": {
+   "file": "certificates/02-montgomery-vaughan-constant/data/data_N12801.txt",
+   "sha256_lf_normalised": "2b6f7f1af49a3706eab28b49a38bb5fa61cdbc7450067e3411569a4939b8deab",
+   "bytes_lf": 380656
+  },
+  "20001": {
+   "file": "certificates/02-montgomery-vaughan-constant/data/data_N20001.txt",
+   "sha256_lf_normalised": "9196c37c28e7b95d6310bea264036614f9543bfd1b2e354c41998b46c9af0c55",
+   "bytes_lf": 578311
+  },
+  "30001": {
+   "file": "certificates/02-montgomery-vaughan-constant/data/data_N30001.txt",
+   "sha256_lf_normalised": "e2aa3e56551840960413ef8a34038cf6b80a97c5d67dfdf92476a0b3aa1b0e9e",
+   "bytes_lf": 866119
+  },
+  "40001": {
+   "file": "certificates/02-montgomery-vaughan-constant/data/data_N40001.txt",
+   "sha256_lf_normalised": "78cc39931e8278d249cc767ba5ffde49fa3f40bb25c3fc22d0cbd1fa3f8dbcc3",
+   "bytes_lf": 1151595
+  },
+  "60001": {
+   "file": "certificates/02-montgomery-vaughan-constant/data/data_N60001.txt",
+   "sha256_lf_normalised": "93d47dc856411b0e5015b403fb24aa87db8c9173d05e9279190eb26fcb473c27",
+   "bytes_lf": 1712509
+  }
+ },
+ "format": "text: N; then N-1 integer gaps on one line; then N lines 'a_m b_m' (integers, w_m = a_m + i b_m)",
+ "programs": {
+  "mvcert.c": "code/02-montgomery-vaughan-constant/mvcert.c (gcc -O2 mvcert.c -lquadmath): __float128 accumulation with a printed rounding-error bound",
+  "verify_mv_txt.py": "code/02-montgomery-vaughan-constant/verify_mv_txt.py (python-flint: method A exact integer cross-correlation, method B arb dot product over all pairs)"
+ },
+ "results": {
+  "N=3201": {
+   "quadmath": "3.13980886702882716312338132837",
+   "python-flint method A": "3.139808867028827163123381328",
+   "note": "below pi: validation of the pipeline"
+  },
+  "N=12801": {
+   "quadmath": "3.14201228222441307631781474553",
+   "python-flint method B": "3.142012282224413076317814746"
+  },
+  "N=20001": {
+   "quadmath": "3.14233037824587367804069591358",
+   "python-flint method B": "3.142330378245873678040695914"
+  },
+  "N=30001": {
+   "quadmath": "3.14255650855873148706067437867",
+   "python-flint method B": "3.142556508558731487060674379"
+  },
+  "N=40001": {
+   "quadmath": "3.14266722108097024687536389912",
+   "python-flint method B": "3.142667221080970246875363899"
+  },
+  "N=60001": {
+   "quadmath": "3.14279097703975450177807689782",
+   "python-flint method B": "3.142790977039754501778076898"
+  }
+ },
+ "construction": "reflection-symmetric gap lists: central block of gap 1 with n_0 points, flanking lattices with gap gamma_j and n_j points on each side (counts 0.11 N, 0.0219 N, 0.0078 N, 0.0027 N; gamma_1 = 0.045 N, ratios 17.9, 9.5, 9.5); weights: top singular vector of the half-size real matrix M_ik = B_ik + B_ik' (B the Montgomery-Vaughan matrix), reflected to the full vector, scaled and rounded to 44-bit integers (code/02-montgomery-vaughan-constant/e14_big.py)",
+ "ceiling": "A finite explicit lower bound for C; the true constant is not determined; the best known upper bound is pi times sqrt(1 + (2/3) sqrt(6/5)) = 4.1325 (Preissmann 1984). Not an estimate of C.",
+ "independent_recomputation": {
+  "sizes": [
+   12801,
+   20001,
+   30001,
+   40001,
+   60001
+  ],
+  "method": "a separate implementation in binary64 with an a-priori summation error bound (relative error at most 2e-11) and comparisons in exact fractions",
+  "agreement": "16 digits, float64 with an a-priori rounding bound and exact fraction comparisons; certified R > 3.14266 at N = 40001 and an enclosure of width 2e-10 around the quad value at N = 60001"
+ }
+}

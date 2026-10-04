@@ -1,0 +1,24 @@
+{
+ "id": "epstein-bst",
+ "statement": "Let Z(s,D) = (D/pi)^s Gamma(s) zeta2(s,D) with zeta2(s,D) = (1/2) sum'_{j,k} (j^2 + D^2 k^2)^(-s) (analytic continuation). At D* = e^gamma/(4 pi): Z(1/2, D*) > 0, so D* is not a zero of zeta2(1/2, .) (refuting Conjecture 1.1 of Betermin-Samaj-Travenec, arXiv:2110.09368). Moreover Z(1/2, D* + 1e-20) < 0, so a zero lies in (D*, D* + 1e-20).",
+ "arb_ball_arithmetic": {
+  "script": "code/04-epstein-conjecture/epstein_arb.py",
+  "output": "code/04-epstein-conjecture/arb.out.txt",
+  "precision_bits": 320,
+  "definition_based": "Z(1/2,D) = -2 + int_1^T t^(-1/2) [theta3(e^{-pi t D}) theta3(e^{-pi t/D}) - 1] dt + tail, T = 600, Arb rigorous integral, tail bounded by 4.1 T^(-1/2) e^(-pi D T)/(pi D)",
+  "Z_half_at_delta_star": "[1.114506174979133299872977033157101950906e-19 +/- 2.50e-60]",
+  "Z_half_at_delta_star_plus_1e_minus_20": "[-7.595923930630107870900320564833149890767e-20 +/- 1.60e-60]",
+  "bessel_series_ball_at_delta_star": "[1.114506174979133e-19 +/- 5.87e-35]",
+  "balls_overlap": true
+ },
+ "true_root": {
+  "delta_c": "0.141733239663887191395415685084185023623144562",
+  "delta_star": "0.141733239663887191389468793101105131175611078",
+  "difference": "5.94689198308e-21",
+  "source": "code/04-epstein-conjecture/epstein_check.py (mpmath, 70 digits; the definition and the Bessel series agree to about 70 digits at Delta*, 0.3 and 0.14 and about 40 digits at 0.9)"
+ },
+ "caveats": [
+  "The Bessel-series identity is derived by Poisson summation in papers/04-epstein-conjecture/main.md section 3 and cross-checked against the definition by Arb balls; it is not formalised in Lean.",
+  "Uniqueness of the zero on (0,1] is Lemma 4.4 of the cited paper; the refutation does not need it."
+ ]
+}
