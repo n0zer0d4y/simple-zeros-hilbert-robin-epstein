@@ -10,7 +10,9 @@ The list `phiLines` is, as exact rationals, the list of 40 lines in
   `m φ(H / m)` for a convex antitone minorant `φ`;
 * `lineMax_convex`, `lineMax_antitone`, `lineMax_ge`, `phi_convex`, `phi_antitone`, `phi_one_lower`: the concrete `φ = max(0, 40 lines)`;
 * `anchor_H8_numeric`: `9 s ≤ min 1 (16 φ(1))` for `s = 21240/10^7`;
-* `pair_sum_anchor_phi`: the anchor for the concrete `φ`, only `φ ≤ h` on `[0, ∞)` (the certified inequality `φ ≤ K_0^2`) remains a hypothesis.
+* `pair_sum_anchor_phi`: the anchor for the concrete `φ`, only `φ ≤ h` on `[0, ∞)` (the certified inequality `φ ≤ K_0^2`) remains a hypothesis;
+* `phi_vanishes`, `phi_le_of_certified`, `pair_sum_anchor_phi_certified`: `φ = 0` on `[1.06, ∞)`, so the hypothesis is needed
+  only on `[0, 1.06]`, exactly the interval `oned_check.py` certifies.
 -/
 
 namespace SimpleZerosHilbertRobinEpstein.SimpleZeros.WangCellAnchor
@@ -220,6 +222,48 @@ theorem lineMax_nonneg (L : List (ℝ × ℝ)) (g : ℝ) : 0 ≤ lineMax L g := 
     show 0 ≤ max (p.1 + p.2 * g) (lineMax L g)
     exact le_trans ih (le_max_right _ _)
 
+/-! ## From the certified interval to `[0, ∞)`
+
+`oned_check.py` certifies `φ ≤ K_0^2` only on `[0, 1.06]`. Every line has negative slope and is
+non-positive at `1.06`, so `φ = 0` from there on; any `h ≥ 0` then dominates `φ` on all of `[0, ∞)`. -/
+
+theorem lineMax_le_zero (L : List (ℝ × ℝ)) (g : ℝ) (hL : ∀ p ∈ L, p.1 + p.2 * g ≤ 0) :
+    lineMax L g ≤ 0 := by
+  induction L with
+  | nil => simp [lineMax]
+  | cons p L ih =>
+    show max (p.1 + p.2 * g) (lineMax L g) ≤ 0
+    exact max_le (hL p (by simp)) (ih (fun q hq => hL q (by simp [hq])))
+
+/-- Each of the 40 lines has non-positive slope and is non-positive at `g = 1.06`. -/
+theorem phiLines_nonpos_at : ∀ p ∈ phiLines, p.2 ≤ 0 ∧ p.1 + p.2 * (106 / 100) ≤ 0 := by
+  norm_num [phiLines]
+
+/-- `φ` vanishes on `[1.06, ∞)`. -/
+theorem phi_vanishes (g : ℝ) (hg : 106 / 100 ≤ g) : lineMax phiLines g = 0 := by
+  refine le_antisymm (lineMax_le_zero phiLines g fun p hp => ?_) (lineMax_nonneg phiLines g)
+  obtain ⟨h1, h2⟩ := phiLines_nonpos_at p hp
+  nlinarith
+
+/-- The certified inequality on `[0, 1.06]` extends to `[0, ∞)` for any `h ≥ 0`. -/
+theorem phi_le_of_certified (h : ℝ → ℝ)
+    (hcert : ∀ y, 0 ≤ y → y ≤ 106 / 100 → lineMax phiLines y ≤ h y) (hnn : ∀ y, 0 ≤ h y) :
+    ∀ y, 0 ≤ y → lineMax phiLines y ≤ h y := by
+  intro y hy
+  rcases le_or_gt y (106 / 100) with hle | hgt
+  · exact hcert y hy hle
+  · rw [phi_vanishes y hgt.le]
+    exact hnn y
+
+/-- `pair_sum_anchor_phi` with the hypothesis exactly as certified: `φ ≤ h` only on `[0, 1.06]`. -/
+theorem pair_sum_anchor_phi_certified {m : ℕ} (hm : 0 < m) (x : Fin (m + 1) → ℝ)
+    (hx : ∀ i : Fin m, x i.castSucc ≤ x i.succ) (H : ℝ)
+    (hH : ∑ i : Fin m, (x i.succ - x i.castSucc) ≤ H) (h : ℝ → ℝ)
+    (hcert : ∀ y, 0 ≤ y → y ≤ 106 / 100 → lineMax phiLines y ≤ h y) (hnn : ∀ y, 0 ≤ h y) :
+    (m : ℝ) * lineMax phiLines (H / m) ≤
+      ∑ i : Fin (m + 1), ∑ j : Fin (m + 1), if i < j then h (x j - x i) else 0 :=
+  pair_sum_anchor_phi hm x hx H hH h (phi_le_of_certified h hcert hnn) hnn
+
 /-- The hypotheses of `pair_sum_anchor_phi` can all hold: `m = 1`, the points `0` and `1`, `H = 1`, `h = φ` itself. -/
 theorem pair_sum_anchor_phi_hyps_satisfiable :
     ((1 : ℕ) : ℝ) * lineMax phiLines ((1 : ℝ) / ((1 : ℕ) : ℝ)) ≤
@@ -229,6 +273,16 @@ theorem pair_sum_anchor_phi_hyps_satisfiable :
     (by intro i; fin_cases i; simp)
     (1 : ℝ) (by simp)
     (lineMax phiLines) (fun y _ => le_refl _) (fun y => lineMax_nonneg phiLines y)
+
+/-- The hypotheses of `pair_sum_anchor_phi_certified` can all hold: the same instance, with `h = φ`. -/
+theorem pair_sum_anchor_phi_certified_hyps_satisfiable :
+    ((1 : ℕ) : ℝ) * lineMax phiLines ((1 : ℝ) / ((1 : ℕ) : ℝ)) ≤
+      ∑ i : Fin (1 + 1), ∑ j : Fin (1 + 1),
+        if i < j then lineMax phiLines (((j : ℕ) : ℝ) - ((i : ℕ) : ℝ)) else 0 := by
+  exact pair_sum_anchor_phi_certified (m := 1) (by norm_num) (fun k : Fin (1 + 1) => ((k : ℕ) : ℝ))
+    (by intro i; fin_cases i; simp)
+    (1 : ℝ) (by simp)
+    (lineMax phiLines) (fun y _ _ => le_refl _) (fun y => lineMax_nonneg phiLines y)
 
 /-- A second witness: `gap_jensen` with `φ = h = φ` itself and two gaps of length `1/2`. -/
 theorem gap_jensen_hyps_satisfiable :

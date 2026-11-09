@@ -118,14 +118,15 @@ The Lean 4 library in [`lean/`](../../lean/) has three result-1 files (namespace
 - **`WangCellAnchor.lean`:**
   - Jensen over adjacent gaps;
   - convexity and antitonicity of the concrete φ = max(0, 40 lines), with the lines equal as exact rationals to the certified ones;
-  - φ(1) ≥ 141397/(5·10⁷), and the H = 8 anchor inequality.
+  - φ(1) ≥ 141397/(5·10⁷), and the H = 8 anchor inequality;
+  - φ = 0 on [1.06, ∞), so the anchor needs φ ≤ K₀² only on [0, 1.06], the interval the certificate covers (`pair_sum_anchor_phi_certified`).
 
-The main statements (`simple_on_line_numeric`, the four numeric instances, `pair_sum_anchor_phi`) have witness theorems that instantiate all of their hypotheses, so they are not vacuous. Every theorem listed in `AxiomCheck.lean` depends only on `propext`, `Classical.choice` and `Quot.sound`, and the library contains no `sorry`.
+The main statements (`simple_on_line_numeric`, the four numeric instances, `pair_sum_anchor_phi` and `pair_sum_anchor_phi_certified`) have witness theorems that instantiate all of their hypotheses, so they are not vacuous. Every theorem listed in `AxiomCheck.lean` depends only on `propext`, `Classical.choice` and `Quot.sound`, and the library contains no `sorry`.
 
 **Not formalised:**
 
 - Wang's Proposition 2.1, the partition inequality for G\_K, and the asymptotics of E\_K and of the cell count; these are hypotheses of the Lean statements;
-- the Taylor constants and second-derivative enclosures, the certified minima, and the inequality φ ≤ K₀²; these are the interval-arithmetic certificates.
+- the Taylor constants and second-derivative enclosures, the certified minima, and the inequality φ ≤ K₀² on [0, 1.06]; these are the interval-arithmetic certificates.
 
 ## 5. Honest scope
 

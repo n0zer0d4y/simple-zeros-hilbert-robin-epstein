@@ -28,6 +28,11 @@ open SimpleZerosHilbertRobinEpstein.OddRobin
 #print axioms WangCellAnchor.anchor_H8_numeric
 #print axioms WangCellAnchor.pair_sum_anchor_phi
 #print axioms WangCellAnchor.pair_sum_anchor_phi_hyps_satisfiable
+#print axioms WangCellAnchor.gap_jensen_hyps_satisfiable
+#print axioms WangCellAnchor.phi_vanishes
+#print axioms WangCellAnchor.phi_le_of_certified
+#print axioms WangCellAnchor.pair_sum_anchor_phi_certified
+#print axioms WangCellAnchor.pair_sum_anchor_phi_certified_hyps_satisfiable
 
 -- Result 3: the formal core of the odd Robin enumeration
 #print axioms violator_ratio_ge
