@@ -1,0 +1,24 @@
+# Settings for the interactive proof map, proofmap.html (https://github.com/n0zer0d4y/proofmap).
+# Regenerate it with `proofmap build` in this folder.
+
+[project]
+title = "Simple zeros of zeta and the odd Robin criterion: the Lean core"
+
+# The main results the page opens on: the theorems behind the "proved" claims in
+# papers/01-simple-zeros-critical-line/claims.md and papers/03-odd-robin-threshold/claims.md.
+# The *_hyps_satisfiable witnesses stay on the page, below them.
+roots = [
+  # Result 1, claim 11: the line form at H = 7 and H = 8
+  "SimpleZerosHilbertRobinEpstein.SimpleZeros.WangCellLine.simple_numeric_H8",
+  "SimpleZerosHilbertRobinEpstein.SimpleZeros.WangCellLine.distinct_numeric_H8",
+  "SimpleZerosHilbertRobinEpstein.SimpleZeros.WangCellLine.simple_numeric_H7",
+  "SimpleZerosHilbertRobinEpstein.SimpleZeros.WangCellLine.distinct_numeric_H7",
+  # Result 1, claim 6: the deduction at H = 4
+  "SimpleZerosHilbertRobinEpstein.SimpleZeros.WangCell.simple_on_line_numeric",
+  # Result 1, claim 15: the Jensen anchor (needing phi <= K_0^2 only on the certified [0, 1.06])
+  "SimpleZerosHilbertRobinEpstein.SimpleZeros.WangCellAnchor.pair_sum_anchor_phi_certified",
+  "SimpleZerosHilbertRobinEpstein.SimpleZeros.WangCellAnchor.anchor_H8_numeric",
+  # Result 3, claims 7 and 8: the candidate set and the pruning inequality
+  "SimpleZerosHilbertRobinEpstein.OddRobin.violator_ratio_ge",
+  "SimpleZerosHilbertRobinEpstein.OddRobin.sigma_div_le_prod",
+]

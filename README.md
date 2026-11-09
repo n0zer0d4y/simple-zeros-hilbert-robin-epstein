@@ -1,6 +1,9 @@
 # simple-zeros-hilbert-robin-epstein
 
-Four small results in analytic number theory and special functions. Each comes with a written argument, rigorous interval-arithmetic or error-bounded certificates, and reproduction code. The finite cores of results 1 and 3 are formalised in a small Lean 4 library.
+[![proofmap: browse the Lean proofs](https://img.shields.io/badge/proofmap-browse_the_Lean_proofs-1e7b45?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHBhdGggZD0iTTcgMTZoN00xOCA5aDdNMTggMjNoN00xNCAxNmw0LTdNMTQgMTZsNCA3IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWxsPSJub25lIi8+PC9zdmc+)](https://n0zer0d4y.github.io/simple-zeros-hilbert-robin-epstein/lean/proofmap.html)
+[![Lean 4](https://img.shields.io/badge/Lean_4-v4.28.0_%2B_Mathlib-blue)](lean/lean-toolchain)
+
+Four small results in analytic number theory and special functions. Each comes with a written argument, rigorous interval-arithmetic or error-bounded certificates, and reproduction code. The finite cores of results 1 and 3 are formalised in a small Lean 4 library, which you can [browse as an interactive proof map](#browsing-the-lean-proofs).
 
 > **Status: unrefereed.** These results were produced autonomously by AI agents running inside a custom research harness; a human set the goals and decided what to publish. No human expert has reviewed them yet; such review is very welcome. None of them bears on the truth of the Riemann hypothesis.
 
@@ -56,7 +59,7 @@ A human set the research goals and decided what to publish; the system chose the
 papers/          one folder per result: main.md (the paper), claims.md (each claim, its evidence and rigor grade)
 certificates/    certificate files (JSON) and, for result 2, the data files
 code/            the scripts that produce the certificates, with the outputs of our runs
-lean/            Lake package SimpleZerosHilbertRobinEpstein (Lean 4 + Mathlib)
+lean/            Lake package SimpleZerosHilbertRobinEpstein (Lean 4 + Mathlib), and proofmap.html, its interactive proof map (settings in proofmap.toml)
 docs/            reproducing.md, verification.md
 ```
 
@@ -77,6 +80,8 @@ For the Lean library:
 cd lean && lake exe cache get && lake build && lake env lean AxiomCheck.lean
 ```
 
+To regenerate the proof map, install [proofmap](https://github.com/n0zer0d4y/proofmap) and run `proofmap build` in `lean/`.
+
 ## How much to trust each claim
 
 Every claim carries a rigor grade in its paper's `claims.md`; see [`docs/verification.md`](docs/verification.md).
@@ -85,6 +90,19 @@ Every claim carries a rigor grade in its paper's `claims.md`; see [`docs/verific
 - **numeric-experiment:** rigorous interval (Arb) or error-bounded arithmetic, reproducible from `code/`.
 - **reference:** a published or preprinted result.
 - **conjectural:** a written argument that is not formalised, or a conclusion resting on an unrefereed preprint. The headline of result 1 is in this class because Wang's preprint is unrefereed. So is the completeness argument behind result 3.
+
+## Browsing the Lean proofs
+
+**[Open the proof map](https://n0zer0d4y.github.io/simple-zeros-hilbert-robin-epstein/lean/proofmap.html)** to review the Lean library in your browser, without installing Lean. The page was generated from the compiled library by [proofmap](https://github.com/n0zer0d4y/proofmap). It shows:
+
+- **Map:** the main theorems and the lemmas and definitions they rest on.
+- **Outline:** the formalisation as a table of contents, with each result's docstring.
+- **Health:** a check that nothing depends on `sorry` or on an axiom outside `propext`, `Classical.choice` and `Quot.sound`. This is the same check as `AxiomCheck.lean`, extended to every declaration.
+- **Path finder:** how a given definition reaches a given theorem.
+
+Each declaration shows its statement and source, with a link to its lines here on GitHub. The page is a single offline file, [`lean/proofmap.html`](lean/proofmap.html). To read it offline, download it and open it in any browser; it loads nothing from the network.
+
+The hypotheses taken from Wang's and Lamzouri's preprints (see [`docs/verification.md`](docs/verification.md#inputs-taken-from-the-literature)) appear in the map as explicit hypotheses of the theorem statements, not as axioms. The Health view confirms that no axiom was added.
 
 ## Prior art
 
