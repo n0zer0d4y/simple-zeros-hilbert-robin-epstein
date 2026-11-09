@@ -113,7 +113,7 @@ theorem proportion_bound (n N E Δ M ψ3 C0 H ε : ℝ) (hψ0 : 0 ≤ ψ3)
 /-- The liminf form: for every `ε > 0`, eventually
 `n / N ≥ (C0 - 2 Ψ3 / H) / (1 - Ψ3) - ε`. -/
 theorem proportion_liminf {α : Type*} (F : Filter α) (n N E Δ M : α → ℝ)
-    (C0 H ψ3 : ℝ) (hH : 0 < H) (hψ0 : 0 ≤ ψ3) (hψ1 : ψ3 < 1)
+    (C0 H ψ3 : ℝ) (_hH : 0 < H) (hψ0 : 0 ≤ ψ3) (hψ1 : ψ3 < 1)
     (hN : ∀ᶠ T in F, 0 < N T)
     (hW : ∀ᶠ T in F, 2 * N T - E T + Δ T ≤ n T)
     (hΔ : ∀ᶠ T in F, ψ3 * (n T - 2 * M T) ≤ Δ T)

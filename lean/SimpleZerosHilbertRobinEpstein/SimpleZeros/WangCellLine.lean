@@ -62,7 +62,7 @@ theorem line_proportion_bound (n N E Δ M s t C0 H ε : ℝ) (ht : 0 ≤ t)
 
 /-- The liminf form of the simple-zeros bound. -/
 theorem line_proportion_liminf {α : Type*} (F : Filter α) (n N E Δ M : α → ℝ)
-    (C0 H s t : ℝ) (hH : 0 < H) (hs1 : s < 1) (ht : 0 ≤ t)
+    (C0 H s t : ℝ) (_hH : 0 < H) (hs1 : s < 1) (ht : 0 ≤ t)
     (hN : ∀ᶠ T in F, 0 < N T)
     (hW : ∀ᶠ T in F, 2 * N T - E T + Δ T ≤ n T)
     (hΔ : ∀ᶠ T in F, s * n T - t * M T ≤ Δ T)

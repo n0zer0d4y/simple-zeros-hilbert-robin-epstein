@@ -227,13 +227,13 @@ theorem pair_sum_anchor_phi_hyps_satisfiable :
         if i < j then lineMax phiLines (((j : ℕ) : ℝ) - ((i : ℕ) : ℝ)) else 0 := by
   exact pair_sum_anchor_phi (m := 1) (by norm_num) (fun k : Fin (1 + 1) => ((k : ℕ) : ℝ))
     (by intro i; fin_cases i; simp)
-    (1 : ℝ) (by simp [Fin.sum_univ_one])
+    (1 : ℝ) (by simp)
     (lineMax phiLines) (fun y _ => le_refl _) (fun y => lineMax_nonneg phiLines y)
 
 /-- A second witness: `gap_jensen` with `φ = h = φ` itself and two gaps of length `1/2`. -/
 theorem gap_jensen_hyps_satisfiable :
     ((2 : ℕ) : ℝ) * lineMax phiLines ((1 : ℝ) / ((2 : ℕ) : ℝ)) ≤ ∑ i : Fin 2, lineMax phiLines ((fun _ : Fin 2 => (1 : ℝ) / 2) i) := by
   exact gap_jensen (m := 2) (by norm_num) (lineMax phiLines) (lineMax phiLines) phi_convex phi_antitone
-    (fun y _ => le_refl _) (fun _ => (1 : ℝ) / 2) (fun _ => by norm_num) 1 (by simp [Fin.sum_univ_two])
+    (fun y _ => le_refl _) (fun _ => (1 : ℝ) / 2) (fun _ => by norm_num) 1 (by simp)
 
 end SimpleZerosHilbertRobinEpstein.SimpleZeros.WangCellAnchor
