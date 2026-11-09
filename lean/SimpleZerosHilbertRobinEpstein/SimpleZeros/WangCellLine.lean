@@ -12,7 +12,9 @@ convex minorant, and superadditivity.  This file proves, with no `sorry`:
 * `cell_sum_line`: summed over cells, `s (Σ k_c) - t #cells ≤ Σ Ψ(k_c)`;
 * `line_proportion_liminf`: Wang's inequality plus the cell bound give `n / N ≥ (C0 - t / H) / (1 - s) - ε` eventually;
 * `line_distinct_liminf`: the distinct-zeros version `D / N ≥ (1 + C0) / 2 + (s u - t / H) / 2 - ε`;
-* `simple_numeric_H7` and `distinct_numeric_H7`: the numeric instance at `H = 7` with `s = 0.0012194`, `t = 0.0045914`.
+* `simple_numeric_H7` and `distinct_numeric_H7`: the numeric instance at `H = 7` with `s = 0.0012194`, `t = 0.0045914`;
+* `simple_numeric_H8` and `distinct_numeric_H8`: the numeric instance at `H = 8` with `s = 0.002124`, `t = 0.0096373`,
+  anchor `K = 9`, giving the headline bounds `0.672724` and `0.836362`.
 
 The analytic inputs (Wang's Proposition 2.1, the partition step, the asymptotics of `E` and of the number of cells) and the certified
 minima enter as hypotheses.  The witnesses at the end instantiate every hypothesis.

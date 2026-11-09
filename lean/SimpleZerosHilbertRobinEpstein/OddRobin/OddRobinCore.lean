@@ -133,8 +133,10 @@ theorem three_violator : Violator 3 := by
   push_cast
   nlinarith
 
-/-- Witness for `sigma_div_le_prod`: its hypothesis `n ≠ 0` holds for a nontrivial `n`. -/
-theorem sigma_div_le_prod_hyps_satisfiable : ∃ n : ℕ, n ≠ 0 ∧ 1 < n :=
-  ⟨6, by norm_num, by norm_num⟩
+/-- Witness for `sigma_div_le_prod`: its hypothesis holds for `n = 6`, which has two prime factors, and the
+theorem applies there (`σ 6 / 6 = 2 ≤ (2/1) (3/2) = 3`). -/
+theorem sigma_div_le_prod_hyps_satisfiable :
+    ((σ 1 6 : ℕ) : ℝ) / (6 : ℕ) ≤ ∏ p ∈ (6 : ℕ).primeFactors, (p : ℝ) / ((p : ℝ) - 1) :=
+  sigma_div_le_prod (by norm_num)
 
 end SimpleZerosHilbertRobinEpstein.OddRobin
